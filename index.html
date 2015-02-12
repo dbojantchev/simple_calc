@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/simple_calc.css">
+
+</head>
+<body>
+
+<div class="calc_wrapper">
+
+    <div class="calc_title">
+        <div class="calc_title2" >Calculator</div>
+        <div class="calc_close" >&times;</div>
+    </div>
+
+    <form name="calculator" >
+
+      <div>
+
+        <div id="mhe_register" class="calc_register"></div>
+
+        <input type="textfield" name="ans" class="calc_result_box" value="" placeholder="0">
+        <table>
+            <tr>
+                <td>
+                    <input id="b_MC" type="button" value="MC" class="calc_but calc_op">
+                </td>
+                <td>
+                    <input id="b_MR" type="button" value="MR" class="calc_but calc_op">
+                </td>
+                <td>
+                    <input id="b_M_plus" type="button" value="M+" class="calc_but calc_op">
+                </td>
+                <td>
+                    <input id="b_M_minus" type="button" value="M-" class="calc_but calc_op">
+                </td>
+                <td>
+                    <input id="b_C" type="button" value="C" class="calc_but calc_op">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="b_point" type="button" value="." class="calc_but calc_op" >
+                </td>
+                <td>
+                    <input id="b_plus_minus" type="button" value="&plusmn;" class="calc_but calc_op" onclick="plus_minus()">
+                </td>
+                <td>
+                    <input id="b_pct" type="button" value="&#37;" class="calc_but calc_op" onclick="pct()">
+                </td>
+                <td>
+                    <input id="b_sqrt" type="button" value="&#x221A;" class="calc_but calc_op" onClick="sqrt()">
+                </td>
+                <td>
+                    <input id="b_CE" type="button" value="CE" class="calc_but calc_op">
+                </td>
+
+            </tr>
+            <tr>
+                <td class="calc_but calc_lit">
+                    <input type="button" value="1" class="calc_but calc_lit">
+                </td>
+                <td class="calc_but calc_lit">
+                    <input type="button" value="2" class="calc_but calc_lit">
+                </td>
+                <td class="calc_but calc_lit">
+                    <input type="button" value="3" class="calc_but calc_lit">
+                </td>
+                <td>
+                    <input id="b_plus" type="button" value="+" class="calc_but calc_op" onClick="addOperator('+')">
+                </td>
+                <td>
+                    <input id="b_minus" type="button" value="-" class="calc_but calc_op" onClick="addOperator('-')">
+                </td>
+            </tr>
+            <tr>
+                <td class="calc_but calc_lit">
+                    <input type="button" value="4" class="calc_but calc_lit" onClick="appendLiteral('4')">
+                </td>
+                <td class="calc_but calc_lit">
+                    <input type="button" value="5" class="calc_but calc_lit" onClick="appendLiteral('5')">
+                </td>
+                <td class="calc_but calc_lit">
+                    <input type="button" value="6" class="calc_but calc_lit" onClick="appendLiteral('6')">
+                </td>
+                <td>
+                    <input id="b_mult" type="button" value="*" class="calc_but calc_op" onClick="addOperator('*')">
+                </td>
+                <td>
+                    <input id="b_div" type="button" value="/" class="calc_but calc_op" onClick="addOperator('/')">
+                </td>
+
+            </tr>
+            <tr>
+                <td class="calc_but calc_lit">
+                    <input type="button" value="7" class="calc_but calc_lit" onClick="appendLiteral('7')">
+                </td>
+                <td class="calc_but calc_lit">
+                    <input type="button" value="8" class="calc_but calc_lit" onClick="appendLiteral('8')">
+                </td>
+                <td class="calc_but calc_lit">
+                    <input type="button" value="9" class="calc_but calc_lit" onClick="appendLiteral('9')">
+                </td>
+                <td>
+                    <input id="b_recip" type="button" value="1/x" class="calc_but calc_op" onClick="recip()">
+                </td>
+                <td>
+                    <input id="b_pow2" type="button" value="x&sup2;" class="calc_but calc_op" onClick="power2()">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" value="0" class="calc_but calc_lit calc_double" onClick="appendLiteral('0')">
+                </td>
+
+                <td colspan="2">
+                    <input id="b_calc" type="button" value="=" class="calc_but calc_op calc_double" onClick="calculateFinal();">
+                </td>
+
+                <td>
+                    <input id="b_pow3" type="button" value="x&sup3;" class="calc_but calc_op" onClick="power3()">
+                </td>
+            </tr>
+
+        </table>
+      </div>
+    </form>
+</div>
+
+<script src="./js/simple_calc.js" tyle="javascript"></script>
+
+
+</body>
+</html>
+
+
+</body>
+</html>
